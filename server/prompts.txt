@@ -1,0 +1,7 @@
+i am writing a diy tutorial for building an smart home weather station using Arduino. provide an introduction to the tutorial (around 400 words)
+
+i am writing a diy tutorial for building an smart home weather station using Arduino. provide an list of materials for the tutorial (around 400 words)
+
+i am writing a diy tutorial for building an smart home weather station using Arduino. provide a procedure for the tutorial (around 400 words)
+
+i am writing a diy tutorial for building an smart home weather station using Arduino. provide a list of important considerations when building to be added to the tutorial (around 400 words)
