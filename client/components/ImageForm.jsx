@@ -10,8 +10,14 @@ export default function ImageForm() {
         };
 
         const response = await fetch("/api/upload_image/", options);
-        alert(await response.text());
+        // alert(await response.text());
         const result = await response.json();
+        // check if error
+        if (result.error) {
+            alert(result.error);
+        } else{
+            
+        }
     };
     return (
         <div className="flex items-center justify-center text-center h-full min-h-[calc(100vh-150px)]">
