@@ -25,4 +25,4 @@ def generate_text(idea, budget, items):
     return content
 
 
-generate_text("Ultrasonic object detection module", 1000, ["arduino", "ultrasonic sensor"])
+#generate_text("Ultrasonic object detection module", 1000, ["arduino", "ultrasonic sensor"])
