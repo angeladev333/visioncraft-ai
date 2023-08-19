@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
 import { Poppins } from "next/font/google";
+import { NextUIProvider } from "@nextui-org/react";
 
 const poppins = Poppins({
   subsets: ["latin-ext"],
