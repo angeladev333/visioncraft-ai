@@ -32,13 +32,8 @@ def yolo():
     parts = list(set(parts))
     return parts
 
-@app.route('/generate_page')
+@app.route('/generate_pdf')
 def generate_page():
-    return "Hello World"
-
-@app.route('/generate_image')
-def generate_image():
-    return "Hello World"
 
 @app.route('/upload_to_ipfs')
 def upload_to_ipfs():
