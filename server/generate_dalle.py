@@ -6,7 +6,7 @@ from random import randint
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-generate_prompt = lambda query: f"{query} in vaporwave style"
+generate_prompt = lambda query: f"A photorealistic photo of {query}. High Resolution 4k Nikon Camera 24.2MP"
 
 def generate_dalle(query):
     response = openai.Image.create(
