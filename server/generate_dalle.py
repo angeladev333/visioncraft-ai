@@ -17,11 +17,12 @@ def generate_dalle(query):
     file_names=[]
     for i in range(0, len(response['data'])):
         image_url = response['data'][i]['url']
-        image_res = requests.get(image_url, stream=True)
-        file_name = f"server/tmp/{randint(0, 1000000)}.png"
-        file_names.append(file_name)
-        with open(file_name, "wb") as out_file:
-            shutil.copyfileobj(image_res.raw, out_file)
-        del image_res
+        # image_res = requests.get(image_url, stream=True)
+        # file_name = f"server/tmp/{randint(0, 1000000)}.png"
+        # file_names.append(file_name)
+        # with open(file_name, "wb") as out_file:
+        #     shutil.copyfileobj(image_res.raw, out_file)
+        # del image_res
+        file_names.append(image_url)
         
     return file_names 
