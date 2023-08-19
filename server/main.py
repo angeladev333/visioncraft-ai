@@ -3,7 +3,9 @@ from flask_restful import Api, Resource
 from roboflow import Roboflow
 import requests
 import os
+from PIL import Image
 import uuid
+import numpy
 
 
 app = Flask(__name__)
@@ -55,12 +57,7 @@ def upload_image():
     if image.filename == '':
         return jsonify({'error': 'No image uploaded'}), 400
     
-    upload_folder = "tmp/"
-    new_filename = generate_unique_filename(image.filename)
-
-    uploaded_file_path = os.path.join(upload_folder, new_filename)
-
-    image.save(uploaded_file_path)
+    np_image = numpy.array(Image.open(image))
 
     #use uploaded_file_path to do something
     #get parts
@@ -69,7 +66,7 @@ def upload_image():
     model = project.version(1).model
 
     # infer on a local image
-    results = model.predict(uploaded_file_path, confidence=10, overlap=30).json()
+    results = model.predict(np_image, confidence=10, overlap=30).json()
     results = results.get('predictions')
     parts = []
     for item in results:
@@ -77,7 +74,8 @@ def upload_image():
     parts = list(set(parts))
 
     # ok now with the parts
-
+    print(parts)
+    return jsonify({'parts': parts}), 200
 
 
 if __name__ == '__main__':
@@ -95,5 +93,5 @@ def upload_to_ipfs():
 
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    app.run('127.0.0.1', port=8080, debug=True)
+    app.run(debug=True)
+    # app.run('127.0.0.1', port=8080, debug=True)
