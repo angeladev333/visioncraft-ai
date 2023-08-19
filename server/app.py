@@ -34,7 +34,7 @@ def yolo():
 
 @app.route('/generate_pdf')
 def generate_page():
-
+    return "Hello World"
 @app.route('/upload_to_ipfs')
 def upload_to_ipfs():
     file = open("server\\multiple_parts.jpg", "rb")
