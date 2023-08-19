@@ -3,14 +3,21 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <ul>
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/about">About</Link>
-      </li>
-    </ul>
+    <div>
+      <div>
+        <Link href="/">
+          <h1>VisionCraft</h1>
+        </Link>
+        <ul>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/generate">Generate</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 

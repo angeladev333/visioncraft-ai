@@ -8,7 +8,7 @@ export const Hero = () => {
         <h1 className="text-6xl font-extrabold p-5">
           Your Toolbox, Our Canvas
         </h1>
-        <p className="text-xl">
+        <p className="text-xl w-2/3 break-normal mx-auto p-5">
           VisionCraft is a new way to capture and analyze your hardware setup,
           unlocking a wealth of possibilities
         </p>
