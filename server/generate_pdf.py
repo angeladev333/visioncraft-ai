@@ -2,9 +2,10 @@ from fpdf import FPDF
 from generate_gpt import *
 from generate_dalle import *
 from add_watermark import *
+import openai
 
 
-def create_pdf(title, company_name, author, idea, budget):
+def create_pdf(title, company_name, author, idea, budget, materials):
     class PDF(FPDF):
         def footer(self):
             # Position at 1.5 cm from bottom
@@ -64,9 +65,10 @@ def create_pdf(title, company_name, author, idea, budget):
     pdf.table_of_contents()
     pdf.set_font('Arial', "", 24)
     topics = ["Introduction", "Materials", "Procedure", "Considerations"]
-    list_of_texts = ["test1", "test2", "test3", "test4"]
-    for index in range(len(list_of_texts)):
-        pdf.body_page(topics[index], list_of_texts[index])
+    openai.api_key = "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"
+    ai_responses = generate_text(idea, budget, materials)
+    for index in range(len(ai_responses)):
+        pdf.body_page(topics[index], ai_responses[index])
     """
     # Calls the function
     AI_answers = call_api(company_name, idea, budget)
@@ -84,4 +86,4 @@ def create_pdf(title, company_name, author, idea, budget):
     #watermark()
     return "Finished"
 
-create_pdf(title="ultrasonic",company_name="ultrasonic-to-go",author="teamwork makes the dreamwork",idea="making ultrasonic tools",budget=50000)
+create_pdf(title="ultrasonic",company_name="ultrasonic-to-go",author="teamwork makes the dreamwork",idea="self flying drone",budget=1000, materials=["arduino", "ultrasonic sensor"])

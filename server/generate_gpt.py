@@ -1,28 +1,34 @@
 import openai
 import os
-import dotenv
+import re
 
-dotenv.load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = "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"
 
 def generate_text(idea, budget, items):
-    prompt = f"I am looking to build an arduino project based on {idea}. Give me a list of materials I would need to do so. My budget is {budget} and the materials I currently have is {items}."
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {
-            "role": "user",
-            "content": prompt
-            }
-        ],
-        temperature=0.9,
-        max_tokens=1000,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0.6,
-    )
-    content = response.choices[0].message.content
-    return content
+    prompts = [f"i am writing a diy tutorial for building an {idea} station using Arduino. provide an introduction to the tutorial (around 400 words)", f"i am writing a diy tutorial for building an {idea} using Arduino. i currently have the following items {items} - you must use them in the materials list. my budget is {budget}. provide a list of materials for the tutorial (around 400 words). include some fluff text before these materials that does not mention an introduction", f"i am writing a diy tutorial for building an {idea} using Arduino. provide a procedure for the tutorial (around 400 words). include some fluff text before this procedure that does not mention an introduction", f"i am writing a diy tutorial for building an {idea} using Arduino. provide a list of important considerations when building to be added to the tutorial (around 400 words). include some fluff text before these considerations that does not mention an introduction"]
+    contents = []
+    for prompt in prompts:
+        print(f"Currently computing: {prompt}")
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {
+                "role": "user",
+                "content": prompt
+                }
+            ],
+            temperature=0,
+            max_tokens=4000,
+            top_p=1,
+            frequency_penalty=0,
+            presence_penalty=0.6,
+        )
+        content = response.choices[0].message.content
+        paragraphs = content.split('\n\n')
+        remaining_text = '\n\n'.join(paragraphs[1:])
+        contents.append(remaining_text)
+    print(contents)
+    return contents
 
 
-#generate_text("Ultrasonic object detection module", 1000, ["arduino", "ultrasonic sensor"])
+
