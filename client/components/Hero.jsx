@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Typewriter } from "react-simple-typewriter";
 
 export const Hero = () => {
   return (
@@ -7,7 +8,18 @@ export const Hero = () => {
       <div className="text-center z-10">
         <h1 className="text-8xl font-extrabold">Your Toolbox,</h1>
         <h1 className="text-8xl font-extrabold p-6 text-violet-600">
-          Our Canvas.
+          Our{" "}
+          <span>
+            <Typewriter
+              words={["Playground.", "Vision.", "Canvas."]}
+              loop={10}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={80}
+              delaySpeed={3000}
+            />
+          </span>
         </h1>
         <p className="text-2xl w-2/3 break-normal mx-auto p-6">
           VisionCraft is a new way to capture and analyze your hardware setup,
