@@ -11,7 +11,7 @@ generate_prompt = lambda query: f"{query} in vaporwave style"
 def generate_dalle(query):
     response = openai.Image.create(
         prompt=generate_prompt(query),
-        n=4,
+        n=5,
         size="256x256",
     )
     file_names=[]
