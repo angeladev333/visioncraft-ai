@@ -63,8 +63,22 @@ def upload_image():
     image.save(uploaded_file_path)
 
     #use uploaded_file_path to do something
+    #get parts
+    rf = Roboflow(api_key="KnKjHINSt6Is99kC3IXv")
+    project = rf.workspace().project("vision-artificial-dataset")
+    model = project.version(1).model
 
-    return jsonify({'message': 'Image uploaded successfully'})
+    # infer on a local image
+    results = model.predict(uploaded_file_path, confidence=10, overlap=30).json()
+    results = results.get('predictions')
+    parts = []
+    for item in results:
+        parts.append(item.get("class"))
+    parts = list(set(parts))
+
+    # ok now with the parts
+
+
 
 if __name__ == '__main__':
     app.run()

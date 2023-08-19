@@ -6,12 +6,12 @@ from random import randint
 
 openai.api_key = "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" 
 
-generate_prompt = lambda query: f"{query} in vaporwave style"
+generate_prompt = lambda query: f"A photorealistic photo of {query}. High Resolution 4k Nikon Camera 24.2MP"
 
 def generate_dalle(query):
     response = openai.Image.create(
         prompt=generate_prompt(query),
-        n=4,
+        n=5,
         size="256x256",
     )
     file_names=[]

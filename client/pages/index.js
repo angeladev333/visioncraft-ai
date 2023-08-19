@@ -2,19 +2,18 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Hero } from "../components/Hero";
 import { NextSeo } from "next-seo";
-import ImageForm from "../components/ImageForm";
 
 export default function Home() {
   return (
     <>
       <NextSeo
-        title="Our Amazing Company"
-        description="Our Amazing Company obviously"
+        title="VisionCraft"
+        description="VisionCraft is a new way to capture and analyze your hardware setup,
+        unlocking a wealth of possibilities"
         favicon="/favicon.ico"
-        />
+      />
       <div>
         <Hero />
-        <ImageForm />
       </div>
     </>
   );

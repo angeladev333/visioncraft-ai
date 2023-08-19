@@ -6,3 +6,43 @@ html {
   scroll-behavior: smooth;
   font-family: "Poppins", Inter, sans-serif;
 }
+
+.button-gradient {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  transition: filter 0.3s;
+}
+
+.button-gradient:hover::before {
+  filter: brightness(0.8);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.custom-img {
+  background-image: url("../public/gradients.png");
+}
