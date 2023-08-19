@@ -1,5 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
-
 # Starting client instructions
 
 ```
@@ -8,6 +6,7 @@ cd client
 if you don't have next installed,
 npm i next
 
+to run application:
 npm run dev
 ```
 
