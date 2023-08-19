@@ -23,15 +23,15 @@ export default function ImageForm() {
         <div className="flex items-center justify-center text-center h-full min-h-[calc(100vh-150px)]">
             <form onSubmit={handleSubmit}>
                 <div className="mb-6">
-                    <label for="whatcreate" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What do you want to create?</label>
+                    <label htmlFor="whatcreate" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What do you want to create?</label>
                     <input type="text" name="whatcreate" id="whatcreate" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="A Mini PC" required />
                 </div>
                 <div className="mb-6">
-                    <label for="materials" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What materials do you have?</label>
+                    <label htmlFor="materials" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What materials do you have?</label>
                     <input type="text" name="materials" id="materials" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Power Adapter, Motherboard, ..." required />
                 </div>
                 <div className="mb-6">
-                    <label for="budget" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What is your budget?</label>
+                    <label htmlFor="budget" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What is your budget?</label>
                     <input type="number" name="budget" id="budget" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="2000" required />
                 </div>
 
