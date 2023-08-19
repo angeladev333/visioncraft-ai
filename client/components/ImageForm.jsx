@@ -42,13 +42,7 @@ export default function ImageForm() {
                     id="user_avatar"
                     type="file"
                 />
-                {/* <div
-          className="mt-1 text-sm text-gray-500 dark:text-gray-300"
-          id="user_avatar_help"
-        >
-          A profile picture is useful to confirm your are logged into your
-          account
-        </div> */}
+      
                 <button
                     type="submit"
                     className="rounded-full text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium w-48 text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"

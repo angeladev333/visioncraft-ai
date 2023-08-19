@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export const Hero = () => {
   return (
-    <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
+    <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover custom-img">
       <div className="text-center z-10">
         <h2 className="text-2xl font-bold p-6 bg-clip-text text-transparent bg-gradient-to-t from-pink-500 to-blue-400">
           Announcing VisionCraft →
