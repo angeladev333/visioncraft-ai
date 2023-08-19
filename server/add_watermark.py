@@ -28,5 +28,3 @@ def watermark(
 
     with open(pdf_result, "wb") as fp:
         writer.write(fp)
-
-watermark()
