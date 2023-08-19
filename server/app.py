@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from flask_restful import Api, Resource
 from roboflow import Roboflow
 import requests
+import os
+import uuid
 
 
 app = Flask(__name__)
@@ -36,6 +38,11 @@ def yolo():
 def generate_page():
     return "Hello World"
 
+def generate_unique_filename(filename):
+    _, extension = os.path.splitext(filename)
+    unique_filename = str(uuid.uuid4()) + extension
+    return unique_filename
+
 @app.route("/upload_image", methods=['POST'])
 def upload_image():
     if 'image' not in request.files:
@@ -44,6 +51,18 @@ def upload_image():
     image = request.files['image']
     # Process and save the image as needed
     # For example, you can save it to a specific directory
+    
+    if image.filename == '':
+        return jsonify({'error': 'No image uploaded'}), 400
+    
+    upload_folder = "tmp/"
+    new_filename = generate_unique_filename(image.filename)
+
+    uploaded_file_path = os.path.join(upload_folder, new_filename)
+
+    image.save(uploaded_file_path)
+
+    #use uploaded_file_path to do something
 
     return jsonify({'message': 'Image uploaded successfully'})
 
