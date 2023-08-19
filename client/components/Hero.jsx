@@ -8,8 +8,8 @@ export const Hero = () => {
       <div className="text-center z-10">
         <h1 className="text-8xl font-extrabold">Your Toolbox,</h1>
         <h1 className="text-8xl font-extrabold p-6 text-violet-600">
-          Our{" "}
-          <span>
+          <span className="bg-violet-400 bg-opacity-50 p-2 inline-block">
+            Our{" "}
             <Typewriter
               words={["Playground.", "Vision.", "Canvas."]}
               loop={10}
