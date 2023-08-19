@@ -1,3 +1,5 @@
+[![HitCount](https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Fangeladev333%2Fhack-the-6ix.json%3Fcolor%3Dpink)
+
 # Starting client instructions
 
 ```
@@ -9,7 +11,3 @@ npm i next
 to run application:
 npm run dev
 ```
-
-Note to self:
-
-- remember to change headers
