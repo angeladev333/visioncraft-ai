@@ -22,6 +22,9 @@
   margin: 0 0 1rem;
   line-height: 1.15;
   font-size: 3.6rem;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* This sets the font to the Semi-Bold weight */
 }
 
 .title {
@@ -32,7 +35,6 @@
 .description {
   text-align: center;
 }
-
 
 .description {
   line-height: 1.5;

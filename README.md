@@ -10,3 +10,8 @@ npm i next
 
 npm run dev
 ```
+
+Note to self:
+
+- app directory is useless atm
+- remember to change headers
