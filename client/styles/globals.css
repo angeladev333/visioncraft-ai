@@ -42,3 +42,7 @@ html {
     background-position: 0% 50%;
   }
 }
+
+.custom-img {
+  background-image: url("../public/gradients.png");
+}

@@ -33,8 +33,13 @@ const Navbar = () => {
           <li className="p-2 hover:text-gray-500">
             <Link href="/">Home</Link>
           </li>
-          <li className="p-2 hover:text-gray-500">
-            <Link href="/generate">Generate</Link>
+
+          <li className="px-10 m-auto hover:text-gray-500">
+            <Link href="/generate">
+              <button className="p-2 w-40 h-10 text-white button-gradient rounded-full">
+                Get Started
+              </button>
+            </Link>
           </li>
         </ul>
       </div>
