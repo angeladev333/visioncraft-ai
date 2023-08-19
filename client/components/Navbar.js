@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
+  const [color, setColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("black");
+
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 90) {
+        setColor("linear-gradient(to bottom, #5485B7, transparent)");
+        setTextColor("white");
+      } else {
+        setColor("transparent");
+        setTextColor("black");
+      }
+    };
+    window.addEventListener("scroll", changeColor);
+  });
+
   return (
-    <div>
-      <div>
+    <div
+      style={{ background: `${color}` }}
+      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+    >
+      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4">
         <Link href="/">
-          <h1>VisionCraft</h1>
+          <h1 style={{ color: `${textColor}` }} className="font-bold text-3xl">
+            VisionCraft
+          </h1>
         </Link>
-        <ul>
-          <li>
+        <ul style={{ color: `${textColor}` }} className="flex">
+          <li className="p-2 hover:text-gray-500">
             <Link href="/">Home</Link>
           </li>
-          <li>
+          <li className="p-2 hover:text-gray-500">
             <Link href="/generate">Generate</Link>
           </li>
         </ul>
