@@ -2,7 +2,7 @@ import openai
 import os
 import re
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def generate_text(idea, budget, items):
     prompts = [f"i am writing a diy tutorial for building an {idea} station using Arduino. provide an introduction to the tutorial (around 600 words)", f"i am writing a diy tutorial for building an {idea} using Arduino. i currently have the following items {items} - you must use them in the materials list. my budget is {budget}. provide a list of materials for the tutorial (around 600 words). include some fluff text before these materials that does not mention an introduction", f"i am writing a diy tutorial for building an {idea} using Arduino. provide a procedure for the tutorial (around 600 words). include some fluff text before this procedure that does not mention an introduction", f"i am writing a diy tutorial for building an {idea} using Arduino. provide a list of important considerations when building to be added to the tutorial (around 600 words). include some fluff text before these considerations that does not mention an introduction"]
