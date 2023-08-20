@@ -94,7 +94,7 @@ export default function Info() {
 
         </div>
         <Card className="bottom-0 left-0 right-0 bg-black text-white mt-7">
-        <footer class="bottom-0 left-0 right-0 bg-white rounded-lg shadow m-4 bg-black">
+        <footer class="bottom-0 left-0 right-0 bg-black rounded-lg shadow m-4">
           <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">VisionCraft™</a>. All Rights Reserved.
           </span>
