@@ -25,6 +25,7 @@
 </a>
 
 </p>
+
 ## Deployment
 
 Since VisionCraft is a non-static full-stack application, we used [Vercel](https://vercel.com/) to ship the deployment. Github Actions was used in the process.
