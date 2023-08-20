@@ -35,7 +35,7 @@ Since VisionCraft is a non-static full-stack application, we used [Vercel](https
 
 ## Usage
 
-When an 'upload_image' api request is initiated, the image gets uploaded to the Roboflow API for YOLO Object detection. Then, the user-inputted form data consolidated with the object detection data is forwarded to a sequence of ChatGPT and DALL-E image prompts. The content generated from these processes is then combined to produce a comprehensive guide in PDF format. (edited)
+When an 'upload_image' api request is initiated, the image gets uploaded to the Roboflow API for YOLO Object detection. Then, the user-inputted form data consolidated with the object detection data is forwarded to a sequence of ChatGPT and DALL-E image prompts. The content generated from these processes is then combined to produce a comprehensive guide in PDF format. 
 
 ## Tech stack and program architecture
 
