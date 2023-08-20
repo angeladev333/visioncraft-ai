@@ -87,6 +87,7 @@ export default function Info() {
                   />
                 </div>
 
+
                 <div className="flex w-full sm:w-1/2 items-center justify-center">
                   <p className="px-2 sm:px-12 text-3xl text-gray-900">
                     Use your desires, budget, and materials to craft
@@ -96,9 +97,9 @@ export default function Info() {
               </div>
             </div>
             <Card className="bottom-0 left-0 right-0 bg-black text-white mt-7">
-              <footer class="bottom-0 left-0 right-0 bg-black rounded-3xl shadow m-4">
-                <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-                  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+              <footer className="bottom-0 left-0 right-0 bg-black rounded-3xl shadow m-4">
+                <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+                  <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                     © 2023 VisionCraft.ai™. All Rights Reserved.
                   </span>
                 </div>
