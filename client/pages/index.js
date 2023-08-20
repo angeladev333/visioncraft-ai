@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="VisionCraft"
-        description="VisionCraft is a new way to capture and analyze your hardware setup,
+        title="VisionCraft.ai"
+        description="VisionCraft.ai is a new way to capture and analyze your hardware setup,
         unlocking a wealth of possibilities"
         favicon="/favicon.ico"
       />
