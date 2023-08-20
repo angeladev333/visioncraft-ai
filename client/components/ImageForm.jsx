@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { redirect } from 'next/navigation'
 
 export default function ImageForm() {
   const [submissionStatus, setSubmissionStatus] = useState(null);
@@ -22,6 +23,8 @@ export default function ImageForm() {
       setSubmissionStatus("error");
     } else {
       setSubmissionStatus("success");
+      // redirect to result["ipfs_url"] value in result
+        redirect(result["ipfs_url"]);
     }
   };
   return (
