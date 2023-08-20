@@ -34,6 +34,10 @@ Since VisionCraft is a non-static full-stack application, we used [Vercel](https
 
 (detail about pdf generation and Yolo)
 
+## Tech stack and program architecture
+
+<img src="client/public/VisionCraft_techstack_flow.png" alt="VisionCraft techstack flow">
+
 ## Starting client instructions (for developers)
 
 ```shell
@@ -54,11 +58,12 @@ npm run dev
 ```
 
 ## Third-Party Extensions
-| Extension                                                                                                                                                   |                                                                                                                         |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| [Python package](https://github.com/sachinraja/simple-icons-py)                                                                                             | <img src="https://simpleicons.org/icons/python.svg" alt="Python" width=24 height=24>                                    |
-| [React package](https://github.com/icons-pack/react-simple-icons)                                                                                           | <img src="https://simpleicons.org/icons/react.svg" alt="React" width=24 height=24>                                      |
-| [NextUI for React](https://github.com/nextui-org/react)                                                                                                     |                                                                                                                         |
-| [React Simple Typewriter](https://www.npmjs.com/package/react-simple-typewriter)                                                                           |                                                                                                                         |
-| [YOLO 3V](https://pjreddie.com/darknet/yolo/)                                                                                                              |                                                                                                                         |
-| [IPFS](https://ipfs.io/)                                                                                                                                    | <img src="https://simpleicons.org/icons/ipfs.svg" alt="IPFS" width=24 height=24>                                        |
+
+| Extension                                                                        |                                                                                      |
+| :------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------- |
+| [Python package](https://github.com/sachinraja/simple-icons-py)                  | <img src="https://simpleicons.org/icons/python.svg" alt="Python" width=24 height=24> |
+| [React package](https://github.com/icons-pack/react-simple-icons)                | <img src="https://simpleicons.org/icons/react.svg" alt="React" width=24 height=24>   |
+| [NextUI for React](https://github.com/nextui-org/react)                          |                                                                                      |
+| [React Simple Typewriter](https://www.npmjs.com/package/react-simple-typewriter) |                                                                                      |
+| [YOLO 3V](https://pjreddie.com/darknet/yolo/)                                    |                                                                                      |
+| [IPFS](https://ipfs.io/)                                                         | <img src="https://simpleicons.org/icons/ipfs.svg" alt="IPFS" width=24 height=24>     |
