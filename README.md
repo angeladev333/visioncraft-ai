@@ -11,7 +11,17 @@
     <a href="https://hits.dwyl.com/angeladev333/hack-the-6ix">
         <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Fangeladev333%2Fhack-the-6ix.json%3Fcolor%3Dpink" alt="HitCount"/>
     </a>
+</p>
+
+<p align="center">
     <a href="https://www.npmjs.com/package/simple-icons"><img src="https://img.shields.io/npm/v/simple-icons.svg?logo=npm" alt="NPM version"/></a>
+    <a href="https://github.com/{owner}/{repo}/pulls">
+    <img src="https://img.shields.io/badge/pull%20requests%20merged-4-blue" alt="Pull Requests Merged">
+    </a>
+    <a href="https://github.com/{owner}/{repo}/commits">
+    <img src="https://img.shields.io/badge/commits-100+-blue" alt="GitHub Commits">
+</a>
+
 </p>
 
 ## Deployment
@@ -45,11 +55,12 @@ npm run dev
 
 ## Third-Party Extensions
 
-| Extension                                                                                                                                                           |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Python package](https://github.com/sachinraja/simple-icons-py) <img src="https://simpleicons.org/icons/python.svg" alt="Python" width=24 height=24>                |
-| [React package](https://github.com/icons-pack/react-simple-icons) <img src="https://simpleicons.org/icons/react.svg" alt="React" width=24 height=24>                |
-| [NextUI for React](https://github.com/nextui-org/react) 
-| [React Simple Typewriter](https://www.npmjs.com/package/react-simple-typewriter)  |
-| [YOLO 3V](https://pjreddie.com/darknet/yolo/)                                   |
-| [IPFS](https://ipfs.io/) <img src="https://simpleicons.org/icons/ipfs.svg" alt="IPFS" width=24 height=24>                                                           |
+| Extension                                                                                                                                            |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Python package](https://github.com/sachinraja/simple-icons-py) <img src="https://simpleicons.org/icons/python.svg" alt="Python" width=24 height=24> |
+| [React package](https://github.com/icons-pack/react-simple-icons) <img src="https://simpleicons.org/icons/react.svg" alt="React" width=24 height=24> |
+
+| [NextUI for React](https://github.com/nextui-org/react)
+| [React Simple Typewriter](https://www.npmjs.com/package/react-simple-typewriter) |
+| [YOLO 3V](https://pjreddie.com/darknet/yolo/) |
+| [IPFS](https://ipfs.io/) <img src="https://simpleicons.org/icons/ipfs.svg" alt="IPFS" width=24 height=24> |
