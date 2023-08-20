@@ -7,6 +7,8 @@ from PIL import Image
 import uuid
 import numpy
 
+from generate_pdf import create_pdf
+
 
 app = Flask(__name__)
 api = Api(app)
@@ -36,10 +38,6 @@ def yolo():
     parts = list(set(parts))
     return parts
 
-@app.route('/generate_pdf')
-def generate_page():
-    return "Hello World"
-
 def generate_unique_filename(filename):
     _, extension = os.path.splitext(filename)
     unique_filename = str(uuid.uuid4()) + extension
@@ -53,7 +51,10 @@ def upload_image():
     image = request.files['image']
     # Process and save the image as needed
     # For example, you can save it to a specific directory
-    
+    whatcreate = request.form.get('whatcreate')
+    materials = request.form.get('materials')
+    budget = request.form.get('budget')
+
     if image.filename == '':
         return jsonify({'error': 'No image uploaded'}), 400
     
@@ -72,12 +73,13 @@ def upload_image():
     for item in results:
         parts.append(item.get("class"))
     parts = list(set(parts))
-    pdf = generate_page()
+    pdf = create_pdf(whatcreate, whatcreate, budget, materials)
     response = requests.post(
         "https://api.nftport.xyz/v0/files",
         headers={"Authorization": '4eee2cb8-3210-407c-9d3f-fbb8dcf09995'},
-        files={"file": pdf}
+        files={"file": pdf.output(dest='S').encode('latin-1')}
     )
+    print(response.json())
     return response.json()
     
 
