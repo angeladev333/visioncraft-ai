@@ -16,6 +16,7 @@ export default function ImageForm() {
 
     const response = await fetch("/api/upload_image/", options);
     const result = await response.json();
+    console.log(result);
     // check if error
     if (result.error) {
       alert(result.error);
@@ -24,7 +25,9 @@ export default function ImageForm() {
       setSubmissionStatus("success");
       // redirect to result["ipfs_url"] value in result
       //   alert(result["ipfs_url"]);
+      console.log("starting redirect");
       window.location.href = result["ipfs_url"];
+      console.log("redirecting");
     }
   };
   return (
