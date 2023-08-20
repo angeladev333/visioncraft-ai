@@ -76,7 +76,7 @@ export default function Info() {
           <h2 className="text-4xl font-bold p-6 text-violet-500">TRANSFORM</h2>
 
           <h1 className="text-5xl w-2/3 break-normal mx-auto mb-10 p-6 font-extrabold">
-            Turn Your Visions into Reality
+            Turn your visions into reality
           </h1>
 
 
