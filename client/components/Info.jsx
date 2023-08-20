@@ -21,12 +21,20 @@ export default function Info() {
     <>
     
     <div className="bg-slate-100 pt-36 pb-16" >
+
+    <div className="mt-8 bg-slate-100 p-4 rounded-3xl pb-40">
+    <h2 className="text-8xl font-bold pr-40 px-40 bg-clip-text text-transparent bg-gradient-to-t from-violet-500 to-blue-400 text-center ">
+    Explore, catalog, and optimize your hardware components.
+        </h2>
+
+        </div>
+
     <div className="flex flex-col items-center justify-center min-h-screen bg-fixed bg-center bg-cover custom-img">
       <div className="text-center z-10" id="features">
-        <div className="bg-[#9971fe] p-4 rounded shadow-md rounded-3xl pb-20">
-          <h2 className="text-4xl font-bold p-6 text-[#d6ebff]">BUILD</h2>
+        <div className="bg-white p-4 rounded shadow-md rounded-3xl pb-20">
+          <h2 className="text-4xl font-bold p-6 text-violet-500">BUILD</h2>
 
-          <h1 className="text-5xl w-2/3 break-normal text-white mx-auto mb-10 p-6 font-extrabold">
+          <h1 className="text-5xl w-2/3 break-normal text-black mx-auto mb-10 p-6 font-extrabold">
             Upload any image and we'll find what you can create
           </h1>
 
@@ -68,7 +76,7 @@ export default function Info() {
           <h2 className="text-4xl font-bold p-6 text-violet-500">TRANSFORM</h2>
 
           <h1 className="text-5xl w-2/3 break-normal mx-auto mb-10 p-6 font-extrabold">
-            Turn Your Visions into Reality
+            Turn your visions into reality
           </h1>
 
 
