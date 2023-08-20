@@ -35,15 +35,17 @@ Since VisionCraft is a non-static full-stack application, we used [Vercel](https
 
 ## Usage
 
-When an 'upload_image' api request is initiated, the image gets uploaded to the Roboflow API for YOLO Object detection. Then, the user-inputted form data consolidated with the object detection data is forwarded to a sequence of ChatGPT and DALL-E image prompts. The content generated from these processes is then combined to produce a comprehensive guide in PDF format. 
+When an 'upload_image' api request is initiated, the image gets uploaded to the Roboflow API for YOLO Object detection. Then, the user-inputted form data consolidated with the object detection data is forwarded to a sequence of ChatGPT and DALL-E image prompts. The content generated from these processes is then combined to produce a comprehensive guide in PDF format.
 
 ## Tech stack and program architecture
 
 <img src="client/public/VisionCraft_techstack_flow.png" alt="VisionCraft techstack flow">
 
+## Project Story
+
 ## Installation (for developers)
 
-### Front-end 
+### Front-end
 
 ```shell
 cd client
@@ -69,6 +71,7 @@ Follow these steps to set up the backend environment and deploy your app. These 
 #### Step 1: Virtual Environment and Dependencies
 
 1. Create a virtual environment and activate it:
+
    ```shell
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -82,9 +85,10 @@ Follow these steps to set up the backend environment and deploy your app. These 
 #### Step 2: Starting the Server Locally
 
 Start the server using the following command:
-   ```shell
-   python server/main.py
-   ```
+
+```shell
+python server/main.py
+```
 
 #### Step 3: Deployment to Google App Engine
 
@@ -93,6 +97,7 @@ Before deploying to Google App Engine, ensure you have the [gCloud CLI](https://
 1. Install the gCloud CLI if you haven't already.
 
 2. Authenticate with Google:
+
    ```shell
    gcloud auth login
    ```
