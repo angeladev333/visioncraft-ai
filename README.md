@@ -38,7 +38,9 @@ Since VisionCraft is a non-static full-stack application, we used [Vercel](https
 
 <img src="client/public/VisionCraft_techstack_flow.png" alt="VisionCraft techstack flow">
 
-## Starting client instructions (for developers)
+## Installation (for developers)
+
+### Front-end 
 
 ```shell
 cd client
@@ -56,6 +58,49 @@ Run web app!
 ```shell
 npm run dev
 ```
+
+### Backend Setup and Deployment
+
+Follow these steps to set up the backend environment and deploy your app. These instructions will guide you through creating a virtual environment, installing dependencies, and deploying to Google App Engine.
+
+#### Step 1: Virtual Environment and Dependencies
+
+1. Create a virtual environment and activate it:
+   ```shell
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+2. Install the required dependencies from `requirements.txt`:
+   ```shell
+   pip install -r requirements.txt
+   ```
+
+#### Step 2: Starting the Server Locally
+
+Start the server using the following command:
+   ```shell
+   python server/main.py
+   ```
+
+#### Step 3: Deployment to Google App Engine
+
+Before deploying to Google App Engine, ensure you have the [gCloud CLI](https://cloud.google.com/sdk/gcloud) installed and authenticated with your Google account.
+
+1. Install the gCloud CLI if you haven't already.
+
+2. Authenticate with Google:
+   ```shell
+   gcloud auth login
+   ```
+
+3. Deploy your app to Google App Engine using:
+   ```shell
+   gcloud app deploy
+   gcloud app browse
+   ```
+
+That's it! Your app is now deployed and accessible via the provided URL using Google App Engine.
 
 ## Third-Party Extensions
 
