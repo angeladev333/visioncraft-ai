@@ -6,13 +6,13 @@ export const Hero = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-center bg-cover bg-[url('/gradients1.png')]">
       <div className="text-center z-10">
-        <h2 className="text-2xl font-bold p-6 bg-clip-text text-transparent bg-gradient-to-t from-fuchsia-400 to-blue-400">
+        <h2 className="text-2xl font-bold p-6 bg-clip-text text-transparent bg-gradient-to-t from-violet-500 to-blue-400">
           Announcing VisionCraft.ai →
         </h2>
 
         <h1 className="text-8xl font-extrabold">Your Toolbox,</h1>
-        <h1 className="text-8xl font-extrabold p-6 text-violet-600">
-          <span className="bg-violet-400 bg-opacity-50 p-2 inline-block">
+        <h1 className="text-8xl font-extrabold p-6 text-violet-500">
+          <span className="text-[#d6ebff]-450  bg-violet-500 bg-opacity-30 p-2 inline-block">
             Our{" "}
             <Typewriter
               words={["Playground.", "Vision.", "Canvas."]}
