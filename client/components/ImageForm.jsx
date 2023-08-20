@@ -24,12 +24,7 @@ export default function ImageForm() {
       setSubmissionStatus("success");
       // redirect to result["ipfs_url"] value in result
       //   alert(result["ipfs_url"]);
-      useEffect(() => {
-        window.open(result["ipfs_url"], '_blank', 'noopener,noreferrer');
-      }, []);
-    
-      return <div>Redirecting...</div>;
-      //window.location.href = result["ipfs_url"];
+      window.location.href = result["ipfs_url"];
     }
   };
   return (
