@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4">
         <Link href="/">
           <h1 style={{ color: `${textColor}` }} className="font-bold text-3xl">
-            VisionCraft
+            VisionCraft.ai
           </h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className="flex">
