@@ -21,7 +21,7 @@ html {
   bottom: 0;
   z-index: -1;
 
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #9e84f3, #3c5be7, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 12s ease infinite;
   transition: filter 0.3s;
@@ -44,5 +44,5 @@ html {
 }
 
 .custom-img {
-  background-image: url("../public/gradients.png");
+  background-image: url("../public/gradients1.png");
 }
