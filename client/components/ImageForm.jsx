@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { redirect } from 'next/navigation'
+import { redirect } from "next/navigation";
 
 export default function ImageForm() {
   const [submissionStatus, setSubmissionStatus] = useState(null);
@@ -24,13 +24,13 @@ export default function ImageForm() {
     } else {
       setSubmissionStatus("success");
       // redirect to result["ipfs_url"] value in result
-    //   alert(result["ipfs_url"]);
-    window.location.href=(result["ipfs_url"]);
+      //   alert(result["ipfs_url"]);
+      window.location.href = result["ipfs_url"];
     }
   };
   return (
     <div className="flex items-center justify-center text-center h-full min-h-[calc(100vh-150px)]">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} data-aos="fade-up">
         <div className="mb-6">
           <label
             htmlFor="whatcreate"
