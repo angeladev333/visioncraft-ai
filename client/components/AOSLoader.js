@@ -3,15 +3,22 @@ import { useRouter } from "next/router";
 
 const AOSLoader = () => {
   const router = useRouter();
+
+  const initAOS = () => {
+    if (window.AOS) {
+      window.AOS.refresh();
+      window.AOS.init({
+        once: false,
+      });
+    }
+  };
+
   useEffect(() => {
+    // This will initialize AOS on component mount (initial load)
+    initAOS();
+
     const handleRouteChange = () => {
-      if (window.AOS) {
-        window.AOS.refresh();
-        // If refresh doesn't work, try destroying and reinitializing
-        window.AOS.init({
-          once: false, // whether animation should happen only once - while scrolling down
-        });
-      }
+      initAOS();
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
