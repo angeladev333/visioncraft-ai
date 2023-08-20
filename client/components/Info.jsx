@@ -18,12 +18,14 @@ export default function Info() {
 
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
+    <>
+    <div className="bg-slate-100 pt-36 pb-16">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-fixed bg-center bg-cover custom-img">
       <div className="text-center z-10">
-        <div className="bg-white p-4 rounded shadow-md rounded-3xl pb-20">
-          <h2 className="text-4xl font-bold p-6 text-violet-500">BUILD</h2>
+        <div className="bg-[#9971fe] p-4 rounded shadow-md rounded-3xl pb-20">
+          <h2 className="text-4xl font-bold p-6 text-[#d6ebff]">BUILD</h2>
 
-          <h1 className="text-5xl w-2/3 break-normal mx-auto mb-10 p-6 font-extrabold">
+          <h1 className="text-5xl w-2/3 break-normal text-white mx-auto mb-10 p-6 font-extrabold">
             Upload any image and we'll find what you can create
           </h1>
 
@@ -87,24 +89,25 @@ export default function Info() {
                 Use your desires to craft personalized creations with step-by-step guidance
               </p>
             </div>
+            
           </div>
 
-
-
-
-
         </div>
-
-
-
-
-
-
+        <Card className="bottom-0 left-0 right-0 bg-black text-white mt-7">
+        <footer class="bottom-0 left-0 right-0 bg-white rounded-lg shadow m-4 bg-black">
+          <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">VisionCraft™</a>. All Rights Reserved.
+          </span>
+        
+          </div>
+      </footer>
+      </Card>
       </div>
-
-
-
+      
     </div>
+    
+    </div>
+    </>
   );
 }
 
