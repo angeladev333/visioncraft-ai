@@ -72,7 +72,6 @@ def upload_image():
     parts = []
     for item in results:
         parts.append(item.get("class"))
-    parts = list(set(parts))
     parts = parts + materials
     parts = list(set(parts))
     pdf = create_pdf(whatcreate, whatcreate, budget, materials)
