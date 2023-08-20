@@ -55,7 +55,7 @@ def create_pdf(idea, budget, materials):
     # ai_responses = test_list
     ai_images = generate_dalle(f"an Arduino-powered {idea}") 
     #ai_images = test_list2
-    for index in range(len(ai_images)):
+    for index in range(len(topics)):
         pdf.body_page(topics[index], ai_responses[index], ai_images[index])
     """
     # Calls the function
@@ -73,4 +73,4 @@ def create_pdf(idea, budget, materials):
     #watermark(pdf)
     return pdf
 
-create_pdf(idea="self flying submarine", budget=1000, materials=["arduino", "ultrasonic sensor"])
+# create_pdf(idea="self flying submarine", budget=1000, materials=["arduino", "ultrasonic sensor"])

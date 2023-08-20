@@ -24,7 +24,8 @@ export default function ImageForm() {
     } else {
       setSubmissionStatus("success");
       // redirect to result["ipfs_url"] value in result
-        redirect(result["ipfs_url"]);
+    //   alert(result["ipfs_url"]);
+    window.location.href=(result["ipfs_url"]);
     }
   };
   return (
