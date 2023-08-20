@@ -6,8 +6,8 @@ export default function Generate() {
   return (
     <>
       <NextSeo
-        title="Generate | VisionCraft"
-        description="VisionCraft is a new way to capture and analyze your hardware setup,
+        title="Generate | VisionCraft.ai"
+        description="VisionCraft.ai is a new way to capture and analyze your hardware setup,
         unlocking a wealth of possibilities"
       />
 

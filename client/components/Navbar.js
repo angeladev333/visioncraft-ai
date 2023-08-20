@@ -26,12 +26,15 @@ const Navbar = () => {
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4">
         <Link href="/">
           <h1 style={{ color: `${textColor}` }} className="font-bold text-3xl">
-            VisionCraft
+            VisionCraft.ai
           </h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className="flex">
           <li className="p-2 hover:text-gray-500">
             <Link href="/">Home</Link>
+          </li>
+          <li className="p-2 hover:text-gray-500">
+            <Link href="#features">Features</Link>
           </li>
 
           <li className="px-10 m-auto hover:text-gray-500">

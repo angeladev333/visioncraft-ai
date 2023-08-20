@@ -18,12 +18,15 @@ export default function Info() {
 
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
-      <div className="text-center z-10">
-        <div className="bg-white p-4 rounded shadow-md rounded-3xl pb-20">
-          <h2 className="text-4xl font-bold p-6 text-violet-500">BUILD</h2>
+    <>
+    
+    <div className="bg-slate-100 pt-36 pb-16" >
+    <div className="flex flex-col items-center justify-center min-h-screen bg-fixed bg-center bg-cover custom-img">
+      <div className="text-center z-10" id="features">
+        <div className="bg-[#9971fe] p-4 rounded shadow-md rounded-3xl pb-20">
+          <h2 className="text-4xl font-bold p-6 text-[#d6ebff]">BUILD</h2>
 
-          <h1 className="text-5xl w-2/3 break-normal mx-auto mb-10 p-6 font-extrabold">
+          <h1 className="text-5xl w-2/3 break-normal text-white mx-auto mb-10 p-6 font-extrabold">
             Upload any image and we'll find what you can create
           </h1>
 
@@ -75,7 +78,7 @@ export default function Info() {
                 width={300}
                 height={300}
                 alt="Imagination"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
                 src="/imagination.jpg"
               />
             </div>
@@ -83,28 +86,29 @@ export default function Info() {
 
             <div className="flex w-full sm:w-1/2 items-center justify-center">
 
-              <p className="px-2 sm:px-12 text-3xl text-gray-900 dark:text-white">
-                Use your desires to craft personalized creations with step-by-step guidance
+              <p className="px-2 sm:px-12 text-3xl text-gray-900">
+                Use your desires, budget, and materials to craft personalized creations with step-by-step guidance
               </p>
             </div>
+            
           </div>
 
-
-
-
-
         </div>
-
-
-
-
-
-
+        <Card className="bottom-0 left-0 right-0 bg-black text-white mt-7">
+        <footer class="bottom-0 left-0 right-0 bg-black rounded-3xl shadow m-4">
+          <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 VisionCraft.ai™. All Rights Reserved.
+          </span>
+        
+          </div>
+      </footer>
+      </Card>
       </div>
-
-
-
+      
     </div>
+    
+    </div>
+    </>
   );
 }
 

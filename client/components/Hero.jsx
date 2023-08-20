@@ -4,10 +4,10 @@ import { Typewriter } from "react-simple-typewriter";
 
 export const Hero = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover custom-img">
+    <div className="flex items-center justify-center h-screen bg-center bg-cover bg-[url('/gradients1.png')]">
       <div className="text-center z-10">
-        <h2 className="text-2xl font-bold p-6 bg-clip-text text-transparent bg-gradient-to-t from-pink-500 to-blue-400">
-          Announcing VisionCraft →
+        <h2 className="text-2xl font-bold p-6 bg-clip-text text-transparent bg-gradient-to-t from-fuchsia-400 to-blue-400">
+          Announcing VisionCraft.ai →
         </h2>
 
         <h1 className="text-8xl font-extrabold">Your Toolbox,</h1>
@@ -26,7 +26,7 @@ export const Hero = () => {
           </span>
         </h1>
         <p className="text-2xl w-2/3 break-normal mx-auto p-6">
-          VisionCraft is a new way to capture and analyze your hardware setup,
+          VisionCraft.ai is a new way to capture and analyze your hardware setup,
           unlocking a wealth of possibilities
         </p>
         <Link href="/generate">
