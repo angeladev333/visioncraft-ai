@@ -28,7 +28,7 @@ export default function Info() {
         </h1>
       
       
-      <div className="gap-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="px-60 gap-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {list.map((item, index) => (
           <Card
             shadow="sm"
