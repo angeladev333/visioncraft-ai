@@ -72,8 +72,9 @@ def upload_image():
     parts = []
     for item in results:
         parts.append(item.get("class"))
+    parts = parts + materials
     parts = list(set(parts))
-    pdf = create_pdf(whatcreate, whatcreate, budget, materials)
+    pdf = create_pdf(whatcreate, budget, materials)
     response = requests.post(
         "https://api.nftport.xyz/v0/files",
         headers={"Authorization": '4eee2cb8-3210-407c-9d3f-fbb8dcf09995'},

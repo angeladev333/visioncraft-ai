@@ -9,7 +9,7 @@ test_list = ["Welcome to this DIY tutorial on building a self-flying drone stati
 
 test_list2 = ['./tmp/797700.png', './tmp/234016.png', './tmp/974939.png', './tmp/410929.png']
 
-def create_pdf(title, idea, budget, materials):
+def create_pdf(idea, budget, materials):
     class PDF(FPDF):
         def footer(self):
             # Position at 1.5 cm from bottom
@@ -45,7 +45,7 @@ def create_pdf(title, idea, budget, materials):
    
 
     pdf = PDF(format="A4")
-    pdf.set_title(title)
+    pdf.set_title("Ardunio Project - By VisionCraft.ai")
     pdf.title_page(idea)
     pdf.set_font('Arial', "", 24)
     topics = ["Introduction", "Materials", "Procedure", "Considerations"]
