@@ -33,6 +33,9 @@ const Navbar = () => {
           <li className="p-2 hover:text-gray-500">
             <Link href="/">Home</Link>
           </li>
+          <li className="p-2 hover:text-gray-500">
+            <Link href="#features">Features</Link>
+          </li>
 
           <li className="px-10 m-auto hover:text-gray-500">
             <Link href="/generate">
