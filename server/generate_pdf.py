@@ -50,10 +50,10 @@ def create_pdf(title, idea, budget, materials):
     pdf.set_font('Arial', "", 24)
     topics = ["Introduction", "Materials", "Procedure", "Considerations"]
     openai.api_key = "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"
-    #ai_responses = generate_text(idea, budget, materials)
-    ai_responses = test_list
-    #ai_images = generate_dalle("") 
-    ai_images = test_list2
+    ai_responses = generate_text(idea, budget, materials)
+    #ai_responses = test_list
+    ai_images = generate_dalle(f"an Arduino-powered {idea}") 
+    #ai_images = test_list2
     for index in range(len(ai_responses)):
         pdf.body_page(topics[index], ai_responses[index], ai_images[index])
     """
@@ -69,8 +69,8 @@ def create_pdf(title, idea, budget, materials):
             print(AI_answers[index_number])
             pdf.body_page(topics[index_number], f"{err}")
     """
-    pdf.output('server/tmp/business_plan.pdf', 'F')
-    watermark()
-    return "Finished"
+    #pdf.output('server/tmp/business_plan.pdf', 'F')
+    #watermark(pdf)
+    return pdf
 
-create_pdf(title="ultrasonic", idea="self flying drone",budget=1000, materials=["arduino", "ultrasonic sensor"])
+#create_pdf(title="ultrasonic", idea="self flying drone", budget=1000, materials=["arduino", "ultrasonic sensor"])

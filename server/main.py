@@ -66,16 +66,20 @@ def upload_image():
     model = project.version(1).model
 
     # infer on a local image
-    results = model.predict(np_image, confidence=10, overlap=30).json()
+    results = model.predict(np_image, confidence=5, overlap=30).json()
     results = results.get('predictions')
     parts = []
     for item in results:
         parts.append(item.get("class"))
     parts = list(set(parts))
-
-    # ok now with the parts
-    print(parts)
-    return jsonify({'parts': parts}), 200
+    pdf = generate_page()
+    response = requests.post(
+        "https://api.nftport.xyz/v0/files",
+        headers={"Authorization": '4eee2cb8-3210-407c-9d3f-fbb8dcf09995'},
+        files={"file": pdf}
+    )
+    return response.json()
+    
 
 
 if __name__ == '__main__':
