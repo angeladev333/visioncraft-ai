@@ -1,3 +1,5 @@
+# Submitted to Hack The 6ix 2023
+
 # A Comprehensive Guide on VisionCraft [![VisionCraft](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/angeladev333/hack-the-6ix)
 
 > VisionCraft is a new way to capture and analyze your hardware setup, unlocking a wealth of possibilities
