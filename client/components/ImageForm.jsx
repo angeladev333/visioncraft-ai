@@ -7,28 +7,50 @@ export default function ImageForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const formData = new FormData(event.target);
+    const randomNumber = Math.floor(Math.random() * 1000000);
 
+    const formData = new FormData(event.target);
+    formData.append("id", randomNumber);
     const options = {
       method: "POST",
       body: formData,
     };
+    
+    const formDataId = new FormData();
+    formDataId.append("id", randomNumber);
 
-    const response = await fetch("/api/upload_image/", options);
-    const result = await response.json();
-    console.log(result);
+    const newOptions = {
+      method: "POST",
+      body: formDataId,
+    };
+
+    fetch("/api/upload_image/", options);
+    // const result = await response.json();
+    // console.log(result);
     // check if error
-    if (result.error) {
-      alert(result.error);
-      setSubmissionStatus("error");
-    } else {
-      setSubmissionStatus("success");
-      // redirect to result["ipfs_url"] value in result
-      //   alert(result["ipfs_url"]);
-      console.log("starting redirect");
-      window.location.href = result["ipfs_url"];
-      console.log("redirecting");
-    }
+    setInterval(() => {  
+      const checkResponse= fetch("/api/check_status/", newOptions);
+      
+      try{
+        const checkResult = checkResponse.json();
+        if(checkResult["ipfs_url"] != "no_link_yet"){
+          window.location.href = checkResult["ipfs_url"];
+        }
+      }catch(err){
+        console.log(err);
+      }
+    }, 1000);
+    // if (result.error) {
+    //   alert(result.error);
+    //   setSubmissionStatus("error");
+    // } else {
+    //   setSubmissionStatus("success");
+    //   // redirect to result["ipfs_url"] value in result
+    //   //   alert(result["ipfs_url"]);
+    //   console.log("starting redirect");
+    //   window.location.href = result["ipfs_url"];
+    //   console.log("redirecting");
+    // }
   };
   return (
     <div className="flex items-center justify-center text-center h-full min-h-[calc(100vh-150px)]">

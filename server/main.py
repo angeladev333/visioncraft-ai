@@ -43,6 +43,17 @@ def generate_unique_filename(filename):
     unique_filename = str(uuid.uuid4()) + extension
     return unique_filename
 
+response_dict = dict()
+
+@app.route("/check_status", methods=['GET', 'POST'])
+def check_status():
+    id = request.form.get('id')
+    if id in response_dict:
+        return jsonify(response_dict[id])
+    else:
+        return jsonify({'ipfs_url': "no_link_yet"})
+
+
 @app.route("/upload_image", methods=['POST'])
 def upload_image():
     if 'image' not in request.files:
@@ -54,6 +65,7 @@ def upload_image():
     whatcreate = request.form.get('whatcreate')
     materials = request.form.get('materials')
     budget = request.form.get('budget')
+    id = request.form.get('id')
 
     if image.filename == '':
         return jsonify({'error': 'No image uploaded'}), 400
@@ -81,6 +93,9 @@ def upload_image():
         headers={"Authorization": '4eee2cb8-3210-407c-9d3f-fbb8dcf09995'},
         files={"file": pdf.output(dest='S').encode('latin-1')}
     )
+    # add found: True to response var
+    response_dict[id] = response
+
     print(response.json())
     return response.json()
     
